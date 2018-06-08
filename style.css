@@ -1,23 +1,57 @@
+/*
+//Palette
+dark-blue: rgba(12, 48, 86);
+med-blue: rgba(34, 67, 101);
+light-blue: #6286a6;
+
+background: rgb(38, 71, 88);
+headline: rgb(166, 184, 193);
+
+*/
+
+html {
+    background-image: linear-gradient(110deg, #36d1dc, #5b86e5);
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh
 }
 
 #container {
     text-align: center;
-    width: 80%;
-    background-color: aliceblue;
+    width: 70%;
+    height: auto;
+    background-color: rgb(79, 111, 127, .6);
+    border-radius: 5px;
     margin: 50px auto 0 auto;
     padding: 25px 0;
+    box-shadow:  0 1px 10px rgba(0,0,0, .2);
 }
 
+h1 {
+    font-size: 40px;
+    color: rgb(166, 184, 193);
+    text-transform: uppercase;
+}
+
+/******************************************/
+/*input*/
+
 input {
+    color: #6286a6;
     border: none;
     padding: 10px;
-    background-color: transparent;
-    border-bottom: 2px solid rgba(0,0,0, .2);
+    background-color: rgba(34, 67, 101);
+    border-bottom: 2px solid rgb(166, 184, 193);
     margin-right: 5px;
+}
+
+input::placeholder {
+    color: #6286a6;
 }
 
 input:focus {
@@ -25,34 +59,67 @@ input:focus {
     border: : 2px solid aqua;
 }
 
+/******************************************/
+/*Button*/
+
 .btn {
     text-transform: uppercase;
+    color: rgb(166, 184, 193);
+    letter-spacing: 1px;
     font-size: 15px;
-    padding: 10px 40px;
-    background-color: bisque;
-    border: 2px solid orange;
+    font-weight: 700;
+    padding: 10px 50px;
+    transform: translateY(2px);
+    background-color: rgba(34, 67, 101);
+    border-style: none;
+    box-shadow:  0 2px 4px rgba(0,0,0, .2);
+    transition: all linear .1s;
 }
 
 .btn:hover {
-    background-color: orange;
+    color: rgba(34, 67, 101);
+    background-color: aliceblue;
 }
+
+.btn:focus {
+    border: none;
+}
+
+.btn:active {
+    transform: scale(.98);
+    border: none;
+    box-shadow:  0 2px 1px rgba(0,0,0, .6);
+}
+
+.btn__add {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+/******************************************/
+/*Contact card*/
 
 ul {
     text-align: left;
     list-style: none;
+    margin-top: 20px;
 }
 
 li {
-    width: 60%;
-    background-color: #fff;
+    width: 45%;
+    background-color: rgba(12, 48, 86);
+    color: #6286a6;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
     margin: 0 auto 10px auto;
     padding: 10px;
-    box-shadow:  0 0 2px rgba(0,0,0, .2);
+    box-shadow:  0 2px 4px rgba(0,0,0, .2);
     position: relative;
     overflow: hidden;
     border-radius: 3px;
+    transition: all linear .2s;
 }
-
 
 li:hover p {
     transform: translateX(-30px);
@@ -61,6 +128,20 @@ li:hover p {
 li:hover span {
     opacity: 1;
     transform: translateX(0px);
+}
+
+.contact__icon {
+    font-size: 22px;
+    margin-right: 20px;
+    transform: translateY(3px);
+}
+
+.contact__icon--trashcan {
+    padding-top: 47px;
+    padding-left: 5px;
+    font-size: 20px;
+    color: rgba(12, 48, 86);
+    transition: all linear .3s;
 }
 
 p {
@@ -74,17 +155,22 @@ span {
     display: block;
     background-color: aliceblue;
     width: 30px;
-    height: 122px;
-    transform: translateX(30px);
+    height: 127px;
+    transform: translateX(26px);
     position: absolute;
     top: 0;
     right: 0;
-    opacity: 0;
+    /*opacity: 0;*/
     transition: all linear .3s;
 }
 
 span:hover {
-    background-color: cadetblue;
+    background-color: #6286a6;
+}
+
+span:hover .contact__icon--trashcan 
+{
+    color: #fff;
 }
 
 .contact__email {

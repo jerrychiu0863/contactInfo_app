@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
 	<title> Title </title>
 </head>
@@ -11,7 +13,7 @@
 <body>
 
 <div id="container">
-    <h1>Contact Form</h1>
+    <h1>Contact Information</h1>
     <input type="text" placeholder="Name">
     <input type="tel" placeholder="Phone">
     <input type="email" placeholder="Email">
@@ -20,10 +22,16 @@
 
     <ul>
         <li>
-            <p>Name: %name%</p>
-            <p>Phone: %phone%</p>
-            <p class="contact__email">E-mail: %email%</p>
-            <span>X</span>
+            <p><i class="fas fa-user-alt contact__icon"></i>Jerry Chiu</p>
+            <p><i class="fas fa-phone contact__icon"></i>628-666-7201</p>
+            <p class="contact__email"><i class="fas fa-envelope contact__icon"></i>m08632000@hotmail.com</p>
+            <span><i class="fas fa-trash-alt contact__icon contact__icon--trashcan"></i></span>
+        </li>
+        <li>
+            <p><i class="fas fa-user-alt contact__icon"></i>Mary</p>
+            <p><i class="fas fa-phone contact__icon"></i>415-555-1234</p>
+            <p class="contact__email"><i class="fas fa-envelope contact__icon"></i>Marykle@gmail.com</p>
+            <span><i class="fas fa-trash-alt contact__icon contact__icon--trashcan"></i></span>
         </li>
     </ul>
 </div>
