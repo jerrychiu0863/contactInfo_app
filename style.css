@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    text-align: center;
+    width: 80%;
+    background-color: aliceblue;
+    margin: 50px auto 0 auto;
+    padding: 25px 0;
+}
+
+input {
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(0,0,0, .2);
+    margin-right: 5px;
+}
+
+input:focus {
+    background-color: #fff;
+    border: : 2px solid aqua;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 10px 40px;
+    background-color: bisque;
+    border: 2px solid orange;
+}
+
+.btn:hover {
+    background-color: orange;
+}
+
+ul {
+    text-align: left;
+    list-style: none;
+}
+
+li {
+    width: 60%;
+    background-color: #fff;
+    margin: 0 auto 10px auto;
+    padding: 10px;
+    box-shadow:  0 0 2px rgba(0,0,0, .2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+
+li:hover p {
+    transform: translateX(-30px);
+}
+
+li:hover span {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+p {
+    display: inline-block;
+    margin-right: 10px;
+    padding-left: 40px;
+    transition: all linear .3s;
+}
+
+span {
+    display: block;
+    background-color: aliceblue;
+    width: 30px;
+    height: 122px;
+    transform: translateX(30px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: all linear .3s;
+}
+
+span:hover {
+    background-color: cadetblue;
+}
+
+.contact__email {
+    display: block;
+}
