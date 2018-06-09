@@ -38,9 +38,11 @@ function init() {
 //Delete Item
 $('ul').on('click', 'span', function(e) {
     e.stopPropagation();
-    $(this).parent().fadeOut(500, function() {
+    $(this).parent().fadeOut(300, function() {
         $(this).remove();
-    })
+    });
+    
+    $('li').css({"transform": "scale(1)", "box-shadow": "0 2px 4px rgba(0,0,0, .18)"});
 });
 
 

@@ -3,14 +3,17 @@
 dark-blue: rgba(12, 48, 86);
 med-blue: rgba(34, 67, 101);
 light-blue: #6286a6;
+extra-light-blue: aliceblue;
 
-background: rgb(38, 71, 88);
-headline: rgb(166, 184, 193);
+background: rgb(79, 111, 127, .3);
+headline: aliceblue;
 
 */
 
 html {
     background-image: linear-gradient(110deg, #36d1dc, #5b86e5);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
@@ -18,23 +21,23 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    height: 100vh
+    height: 100%;
 }
 
 #container {
     text-align: center;
     width: 70%;
     height: auto;
-    background-color: rgb(79, 111, 127, .6);
+    background-color: rgb(79, 111, 127, .3);
     border-radius: 5px;
-    margin: 50px auto 0 auto;
+    margin: 50px auto 80px auto;
     padding: 25px 0;
     box-shadow:  0 1px 10px rgba(0,0,0, .2);
 }
 
 h1 {
     font-size: 40px;
-    color: rgb(166, 184, 193);
+    color: aliceblue;
     text-transform: uppercase;
 }
 
@@ -42,21 +45,22 @@ h1 {
 /*input*/
 
 input {
-    color: #6286a6;
+    color: rgba(12, 48, 86);
+    font-weight: 600;
     border: none;
     padding: 10px;
-    background-color: rgba(34, 67, 101);
+    background-color: transparent;
     border-bottom: 2px solid rgb(166, 184, 193);
     margin-right: 5px;
 }
 
 input::placeholder {
-    color: #6286a6;
+    color:  rgba(12, 48, 86);
 }
 
 input:focus {
-    background-color: #fff;
-    border: : 2px solid aqua;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(12, 48, 86);
 }
 
 /******************************************/
@@ -64,31 +68,27 @@ input:focus {
 
 .btn {
     text-transform: uppercase;
-    color: rgb(166, 184, 193);
+    color: rgba(34, 67, 101);
     letter-spacing: 1px;
     font-size: 15px;
     font-weight: 700;
     padding: 10px 50px;
     transform: translateY(2px);
-    background-color: rgba(34, 67, 101);
+    background-color: transparent;
     border-style: none;
-    box-shadow:  0 2px 4px rgba(0,0,0, .2);
+    border: 2px solid rgba(34, 67, 101);
     transition: all linear .1s;
 }
 
 .btn:hover {
-    color: rgba(34, 67, 101);
-    background-color: aliceblue;
-}
-
-.btn:focus {
-    border: none;
+    color:  aliceblue;
+    background-color: rgba(34, 67, 101);
 }
 
 .btn:active {
-    transform: scale(.98);
+    transform: translateY(2px);
     border: none;
-    box-shadow:  0 2px 1px rgba(0,0,0, .6);
+
 }
 
 .btn__add {
