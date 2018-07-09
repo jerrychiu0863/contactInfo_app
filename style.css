@@ -88,12 +88,16 @@ input:focus {
 .btn:active {
     transform: translateY(2px);
     border: none;
-
 }
 
 .btn__add {
     margin-left: 10px;
     margin-right: 5px;
+}
+
+.btn__clear {
+    background-color: rgba(34, 67, 101);
+    color:  aliceblue;
 }
 
 /******************************************/
