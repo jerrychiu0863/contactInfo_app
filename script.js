@@ -1,7 +1,23 @@
 ////////////////////////////////////////////////
-//Add listItem
-$('.btn__add').on('click', function(){
-     //Grab value
+//Clear Fields
+$('.btn__clear').on('click', function(e) {
+    e.preventDefault();
+    init();
+});
+
+
+////////////////////////////////////////////////
+//Init function
+function init() {
+    $("input[type='text']").val('');
+    $("input[type='tel']").val('');
+    $("input[type='email']").val('');
+};
+
+////////////////////////////////////////////////
+//AddItem function
+function addItem() {
+    //Grab value
      var name = $("input[type='text']").val();
      var tel = $("input[type='tel']").val();
      var email = $("input[type='email']").val();
@@ -15,22 +31,6 @@ $('.btn__add').on('click', function(){
      msg += '<p class="contact__email"><i class="fas fa-envelope contact__icon"></i> ' + email + '</p>';
      msg += '<span><i class="fas fa-trash-alt contact__icon contact__icon--trashcan"></i></span></li>';
      $('ul').append(msg);
-});
-
-
-////////////////////////////////////////////////
-//Clear Fields
-$('.btn__clear').on('click', function() {
-    init();
-});
-
-
-////////////////////////////////////////////////
-//Init function
-function init() {
-    $("input[type='text']").val('');
-    $("input[type='tel']").val('');
-    $("input[type='email']").val('');
 };
 
 
@@ -56,4 +56,16 @@ $(document).on('mouseenter', 'li', function() {
 $(document).on('mouseleave', 'li', function() {
     $(this).css({"transform": "scale(1)", "box-shadow": "0 2px 4px rgba(0,0,0, .18)"});
     $(this).siblings().css("transform", "scale(1)")
+});
+
+////////////////////////////////////////////////
+//Add listItem
+$('#form').on('submit', function(e) {
+    e.preventDefault();
+    addItem();
+});
+
+$('.btn__add').on('click', function(e){
+     e.preventDefault();
+     addItem();
 });
